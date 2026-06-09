@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +9,16 @@
 body {
   background: #000;
   color: white;
+  font-size: 16px;
 }
 
+/* CONTAINER */
 .container {
   width: 100%;
   min-height: 100vh;
 }
 
 /* NAVBAR */
-
 .navbar {
   position: absolute;
   top: 0;
@@ -27,179 +29,191 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 24px 20px;
+  padding: 28px 60px;
 }
 
 .logo {
-  font-size: 20px;
-  letter-spacing: 3px;
+  font-size: 24px;
+  letter-spacing: 4px;
   font-weight: 700;
 }
 
-/* HERO */
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
 
+.navbar nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* HERO */
 .hero {
   position: relative;
   height: 100vh;
 
+  background-image: url("https://th.bing.com/th/id/R.5c73556efd3e74b85fd6eb916ff0369f?pid=ImgRaw&r=0");
+
+  background-size: cover;
+  background-position: center;
+
   display: flex;
   align-items: center;
-  justify-content: center;
+}
 
-  text-align: center;
-  padding: 20px;
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(7, 35, 197, 0.9),
+    rgba(65, 4, 179, 0.8),
+    rgba(129, 8, 177, 0.9)
+  );
 }
 
 /* TEXTO */
-
 .content {
-  max-width: 500px;
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+  margin-left: 120px;
 }
 
+/* TITULO */
 .content h1 {
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: clamp(32px, 6vw, 72px);
+  line-height: 1.1;
   margin-bottom: 20px;
 }
 
+/* SUBTITLE */
 .subtitle {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 18px);
 }
 
+/* SMALL */
+.small-text {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* PREÇO */
 .price {
-  font-size: 48px;
+  margin: 10px 0 30px;
+
+  font-size: clamp(32px, 6vw, 72px);
   font-weight: bold;
-  margin-bottom: 25px;
 }
 
 .price span {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
 }
 
 /* BOTÕES */
-
 .buttons {
   display: flex;
-  justify-content: center;
+  gap: 15px;
 }
 
 .btn-primary {
-  background: #111;
+  background: #2e2c2c;
   color: white;
 
   border: none;
   padding: 14px 28px;
   border-radius: 6px;
 
+  font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn-primary:hover {
-  background: #222;
+  transform: translateY(-3px);
+  background: #444;
 }
 
-/* FEATURES */
-
-.features {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.features p {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* CARRINHO */
-
-.cart {
-  padding: 20px;
-}
-
-.cart h2 {
-  margin-bottom: 10px;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  margin-top: 10px;
-}
-
-.cart-item img {
-  width: 60px;
-}
-
-.cart-item button {
-  margin-left: auto;
-  border: none;
-  background: red;
+.btn-secondary {
+  background: transparent;
   color: white;
-  padding: 5px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  padding: 14px 28px;
+  border-radius: 6px;
+
+  font-size: 16px;
   cursor: pointer;
 }
 
-/* CHECKOUT */
-
-.checkout {
-  padding: 20px;
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
 }
 
-.checkout button {
-  margin-top: 10px;
-}
+/* IMAGEM */
+.hero-image {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
 
-/* TEMA */
+  height: 80%;
+  z-index: 2;
 
-.dark {
-  background: #050505;
-  color: white;
-}
-
-.light {
-  background: #f5f5f5;
-  color: black;
-}
-
-/* ANIMAÇÃO */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+  filter:
+    drop-shadow(0 0 30px rgba(255,255,255,0.2))
+    drop-shadow(0 0 60px rgba(255,255,255,0.1));
 }
 
 /* RESPONSIVO */
+@media (max-width: 900px) {
 
-@media (max-width: 600px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .content {
+    margin: 0 20px;
+    text-align: center;
+  }
 
   .content h1 {
-    font-size: 28px;
+    font-size: 36px;
   }
 
   .price {
-    font-size: 38px;
+    font-size: 40px;
   }
 
-  .btn-primary {
-    width: 70%;
-    max-width: 240px;
+  .buttons {
+    flex-direction: column;
   }
-}
 
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .hero-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+
+    height: 220px;
+    margin-top: 30px;
+  }
 }
