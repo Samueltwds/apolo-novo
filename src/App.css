@@ -12,12 +12,6 @@ body {
   font-size: 16px;
 }
 
-/* CONTAINER */
-.container {
-  width: 100%;
-  min-height: 100vh;
-}
-
 /* NAVBAR */
 .navbar {
   position: absolute;
@@ -40,60 +34,34 @@ body {
 
 /* HERO */
 .hero {
-  position: relative;
   height: 100vh;
 
   display: flex;
-  justify-content: center;   /* central horizontal */
-  align-items: center;       /* central vertical */
+  justify-content: center;
+  align-items: center;
 
   text-align: center;
   padding: 20px;
 }
 
-/* TEXTO */
+/* CONTEÚDO CENTRAL */
 .content {
-  position: relative;
-  z-index: 2;
+  display: flex;
+  flex-direction: column; /* ✅ um embaixo do outro */
+  align-items: center;
+  gap: 20px;
 
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;
 }
 
-/* TITULO */
+/* TÍTULO */
 .content h1 {
   font-size: clamp(24px, 4vw, 48px);
   line-height: 1.2;
-  margin-bottom: 20px;
 }
 
-/* SUBTITLE */
-.subtitle {
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-/* PREÇO */
-.price {
-  margin: 10px 0 25px;
-
-  font-size: clamp(24px, 4vw, 48px);
-  font-weight: bold;
-}
-
-.price span {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-/* BOTÕES */
-.buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
+/* BOTÃO */
 .btn-primary {
   background: #2e2c2c;
   color: white;
@@ -110,23 +78,6 @@ body {
 .btn-primary:hover {
   transform: translateY(-2px);
   background: #444;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: white;
-
-  border: 1px solid rgba(255, 255, 255, 0.5);
-
-  padding: 12px 24px;
-  border-radius: 6px;
-
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
 }
 
 /* FEATURES */
@@ -153,11 +104,6 @@ body {
   margin: auto;
 }
 
-.cart h2 {
-  margin-bottom: 10px;
-}
-
-/* ITEM */
 .cart-item {
   display: flex;
   align-items: center;
@@ -192,16 +138,16 @@ body {
     font-size: 28px;
   }
 
-  .price {
-    font-size: 30px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .btn-primary,
-  .btn-secondary {
+  .btn-primary {
     width: 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item button {
+    align-self: flex-end;
   }
 }
