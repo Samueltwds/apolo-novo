@@ -1,37 +1,60 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
 /* TEMAS */
 .dark {
-  background: #050505;
+  background: linear-gradient(120deg, #050505, #0f0f1a);
   color: white;
 }
 
 .light {
   background: #f5f5f5;
-  color: black;
+  color: #111;
 }
 
 /* NAVBAR */
 .navbar {
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* BOTÃO TEMA */
 .toggle {
-  background: none;
+  background: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  transform: scale(1.2);
 }
 
 /* HERO */
 .hero {
-  height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TITULO */
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 /* BOTÃO */
@@ -39,46 +62,34 @@
   background: black;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 14px 30px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* BOTÃO HOVER */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: #222;
 }
 
 /* FEATURES */
 .features {
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* SCROLL REVEAL */
+.features h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.features p {
+  opacity: 0.7;
+}
+
+/* ANIMAÇÃO SCROLL */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* CARRINHO */
-.cart {
-  padding: 20px;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.cart-item img {
-  width: 60px;
-}
-
-/* CHECKOUT */
-.checkout {
-  padding: 20px;
-}
