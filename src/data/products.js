@@ -4,6 +4,6 @@ export const products = [
     name: "Fone Apolo Pro",
     price: 198.99,
     image:
-      "https://thf.bing.com/th/id/OIP.w5d5fxy7zGfD1FeuJsYFrgHaFj?w=276",
+      "https://down-ph.img.susercontent.com/file/cn-11134207-7r98o-ly4is7pijzze6a",
   },
 ];
