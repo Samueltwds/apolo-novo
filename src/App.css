@@ -27,7 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px;
+  padding: 18px 20px;
 }
 
 .logo {
@@ -36,10 +36,9 @@ body {
   font-weight: 700;
 }
 
-/* HERO */
+/* HERO (AJUSTADO PRA MOBILE REAL) */
 .hero {
-  position: relative;
-  min-height: 100vh;
+  min-height: 85vh;
 
   display: flex;
   flex-direction: column;
@@ -47,7 +46,8 @@ body {
   align-items: center;
 
   text-align: center;
-  padding: 20px;
+
+  padding: 70px 20px 30px;
 }
 
 /* CONTEÚDO */
@@ -56,20 +56,20 @@ body {
 }
 
 .content h1 {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .subtitle {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 .price {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .price span {
@@ -93,6 +93,9 @@ body {
 
   cursor: pointer;
   transition: 0.3s;
+
+  width: 80%;
+  max-width: 280px;
 }
 
 .btn-primary:hover {
@@ -101,23 +104,24 @@ body {
 
 /* FEATURES */
 .features {
-  padding: 50px 20px;
+  padding: 30px 20px 20px;
   text-align: center;
 }
 
 .features h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .features p {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.8;
 }
 
 /* CARRINHO */
 .cart {
   padding: 20px;
+  margin-top: 10px;
 }
 
 .cart h2 {
@@ -133,7 +137,7 @@ body {
 }
 
 .cart-item img {
-  width: 60px;
+  width: 55px;
 }
 
 .cart-item button {
@@ -141,7 +145,7 @@ body {
   border: none;
   background: red;
   color: white;
-  padding: 5px 10px;
+  padding: 6px 10px;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -152,7 +156,8 @@ body {
 }
 
 .checkout button {
-  margin-top: 10px;
+  margin-top: 12px;
+  width: 100%;
 }
 
 /* TEMA */
@@ -180,30 +185,28 @@ body {
   transform: translateY(0);
 }
 
-/* RESPONSIVO MOBILE */
+/* MOBILE REAL (TELA ~6.1") */
 @media (max-width: 600px) {
 
+  body {
+    overflow-x: hidden;
+  }
+
   .hero {
-    min-height: auto;
-    padding: 80px 20px 40px;
+    min-height: 75vh;
+    padding-top: 80px;
   }
 
   .content h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .price {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .btn-primary {
-    width: 70%;
-    max-width: 240px;
-    padding: 14px;
-  }
-
-  .features {
-    padding: 40px 20px;
+    width: 85%;
   }
 
 }
