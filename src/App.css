@@ -1,95 +1,224 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TEMAS */
-.dark {
-  background: linear-gradient(120deg, #050505, #0f0f1a);
+body {
+  background: #000;
   color: white;
 }
 
-.light {
-  background: #f5f5f5;
-  color: #111;
+.container {
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* NAVBAR */
+
 .navbar {
-  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 28px 60px;
 }
 
-/* BOTÃO TEMA */
-.toggle {
-  background: transparent;
-  border: none;
+.logo {
   font-size: 22px;
-  cursor: pointer;
-  transition: 0.3s;
+  letter-spacing: 4px;
+  font-weight: 700;
 }
 
-.toggle:hover {
-  transform: scale(1.2);
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.plans {
+  display: flex;
+  gap: 10px;
+}
+
+.plans button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.15);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.plans .active {
+  background: white;
+  color: black;
 }
 
 /* HERO */
+
 .hero {
-  height: 70vh;
+  position: relative;
+  height: 100vh;
+
+  background-image:
+    url("https://th.bing.com/th/id/R.5c73556efd3e74b85fd6eb916ff0369f?rik=IbKm1uokF53TPg&pid=ImgRaw&r=0");
+
+  background-size: cover;
+  background-position: center;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 25px;
-  text-align: center;
-  padding: 20px;
 }
 
-/* TITULO */
-.hero h1 {
-  font-size: 48px;
-  font-weight: 800;
-  letter-spacing: -1px;
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 35, 197, 0.966) 0%,
+      rgba(65, 4, 179, 0.877) 35%,
+      rgba(129, 8, 177, 0.918) 100%
+    );
 }
 
-/* BOTÃO */
-.btn-primary {
-  background: black;
-  color: white;
-  border: none;
-  padding: 14px 30px;
-  cursor: pointer;
-  border-radius: 8px;
+.content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+  margin-left: 120px;
+}
+
+.content h1 {
+  font-size: 72px;
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.small-text {
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.price {
+  margin-top: 10px;
+  margin-bottom: 35px;
+
+  font-size: 72px;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-/* BOTÃO HOVER */
-.btn-primary:hover {
-  transform: translateY(-3px);
-  background: #222;
+.price span {
+  font-size: 28px;
+  font-weight: 400;
 }
 
-/* FEATURES */
-.features {
-  padding: 60px 20px;
-  text-align: center;
+/* BOTÕES */
+
+.buttons {
+  display: flex;
+  gap: 15px;
 }
 
-.features h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
+.btn-primary {
+  background: rgb(46, 44, 44);
+  color: rgb(255, 255, 255);
+
+  border: none;
+  padding: 14px 32px;
+
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.features p {
-  opacity: 0.7;
+.btn-secondary {
+  background: transparent;
+  color: rgb(255, 255, 255);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  padding: 14px 32px;
+
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* ANIMAÇÃO SCROLL */
-.reveal {
-  opacity: 0;
+/* IMAGEM */
+
+.hero-image {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 85%;
+  width: auto;
+
+  z-index: 2;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 30px rgba(255,255,255,0.2))
+    drop-shadow(0 0 80px rgba(255,255,255,0.15));
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .content {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .content h1 {
+    font-size: 48px;
+  }
+
+  .price {
+    font-size: 54px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+
+    height: 250px;
+    margin-top: 30px;
+  }
+}
+``
