@@ -36,9 +36,9 @@ body {
   font-weight: 700;
 }
 
-/* HERO (AJUSTADO PRA MOBILE REAL) */
+/* HERO (AGORA COMPACTO) */
 .hero {
-  min-height: 85vh;
+  min-height: 60vh;
 
   display: flex;
   flex-direction: column;
@@ -46,8 +46,7 @@ body {
   align-items: center;
 
   text-align: center;
-
-  padding: 70px 20px 30px;
+  padding: 50px 20px 20px;
 }
 
 /* CONTEÚDO */
@@ -55,21 +54,24 @@ body {
   max-width: 500px;
 }
 
+/* TÍTULO MAIOR */
 .content h1 {
-  font-size: 30px;
+  font-size: 34px;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
+/* SUBTEXTO */
 .subtitle {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-size: 15px;
 }
 
+/* PREÇO */
 .price {
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .price span {
@@ -96,21 +98,22 @@ body {
 
   width: 80%;
   max-width: 280px;
+  margin-top: 5px;
 }
 
 .btn-primary:hover {
   background: #222;
 }
 
-/* FEATURES */
+/* FEATURES (MAIS COLADO) */
 .features {
-  padding: 30px 20px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
 .features h2 {
   font-size: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .features p {
@@ -185,20 +188,17 @@ body {
   transform: translateY(0);
 }
 
-/* MOBILE REAL (TELA ~6.1") */
+/* MOBILE REAL */
 @media (max-width: 600px) {
 
-  body {
-    overflow-x: hidden;
-  }
-
   .hero {
-    min-height: 75vh;
-    padding-top: 80px;
+    min-height: 55vh;
+    padding-top: 60px;
   }
 
+  /* TÍTULO GRANDE NO CELULAR */
   .content h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .price {
@@ -207,6 +207,11 @@ body {
 
   .btn-primary {
     width: 85%;
+    margin-top: 8px;
+  }
+
+  .features {
+    padding: 25px 20px;
   }
 
 }
