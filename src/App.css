@@ -221,4 +221,53 @@ body {
     margin-top: 30px;
   }
 }
-``
+
+@media (max-width: 600px) {
+
+  .hero {
+    height: auto;
+    padding: 60px 20px 40px;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .btn-primary {
+    width: 70%;
+    max-width: 250px;
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .features {
+    padding: 30px 20px;
+  }
+
+  .features h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .features p {
+    font-size: 13px;
+  }
+
+  .cart {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .checkout button {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navbar {
+    padding: 14px;
+  }
+
+}
