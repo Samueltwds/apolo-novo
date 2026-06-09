@@ -5,15 +5,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  font-size: 18px; /* 🔥 aumenta escala geral */
+}
+
 body {
   background: #000;
   color: white;
-}
-
-/* CONTAINER */
-.container {
-  width: 100%;
-  min-height: 100vh;
 }
 
 /* NAVBAR */
@@ -21,22 +19,12 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 10;
-
+  padding: 16px 18px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 18px 20px;
 }
 
-.logo {
-  font-size: 20px;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
-
-/* HERO (AGORA COMPACTO) */
+/* HERO */
 .hero {
   min-height: 60vh;
 
@@ -45,173 +33,74 @@ body {
   justify-content: center;
   align-items: center;
 
+  padding: 60px 20px 20px;
   text-align: center;
-  padding: 50px 20px 20px;
 }
 
-/* CONTEÚDO */
-.content {
-  max-width: 500px;
-}
-
-/* TÍTULO MAIOR */
+/* TÍTULO GRANDE */
 .content h1 {
-  font-size: 34px;
+  font-size: 2rem; /* 🔥 escala baseada no root */
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* SUBTEXTO */
+/* SUB */
 .subtitle {
-  margin-bottom: 12px;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 /* PREÇO */
 .price {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
 }
 
-.price span {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-/* BOTÕES */
-.buttons {
-  display: flex;
-  justify-content: center;
-}
-
+/* BOTÃO */
 .btn-primary {
   background: #111;
   color: white;
-
   border: none;
-  padding: 14px 28px;
+
+  padding: 14px 26px;
   border-radius: 6px;
 
-  cursor: pointer;
-  transition: 0.3s;
+  font-size: 1rem;
 
   width: 80%;
   max-width: 280px;
-  margin-top: 5px;
 }
 
-.btn-primary:hover {
-  background: #222;
-}
-
-/* FEATURES (MAIS COLADO) */
+/* FEATURES */
 .features {
-  padding: 20px 20px;
+  padding: 24px 20px;
   text-align: center;
 }
 
 .features h2 {
-  font-size: 20px;
-  margin-bottom: 6px;
+  font-size: 1.3rem;
 }
 
 .features p {
-  font-size: 13px;
-  opacity: 0.8;
+  font-size: 0.9rem;
 }
 
-/* CARRINHO */
-.cart {
-  padding: 20px;
-  margin-top: 10px;
-}
-
-.cart h2 {
-  margin-bottom: 10px;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  margin-top: 10px;
-}
-
-.cart-item img {
-  width: 55px;
-}
-
-.cart-item button {
-  margin-left: auto;
-  border: none;
-  background: red;
-  color: white;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-/* CHECKOUT */
-.checkout {
-  padding: 20px;
-}
-
-.checkout button {
-  margin-top: 12px;
-  width: 100%;
-}
-
-/* TEMA */
-.dark {
-  background: #050505;
-  color: white;
-  min-height: 100vh;
-}
-
-.light {
-  background: #f5f5f5;
-  color: black;
-  min-height: 100vh;
-}
-
-/* ANIMAÇÃO */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* MOBILE REAL */
+/* MOBILE MAIS FORTE */
 @media (max-width: 600px) {
+
+  html {
+    font-size: 20px; /* 🔥 aumenta mais ainda no celular */
+  }
 
   .hero {
     min-height: 55vh;
-    padding-top: 60px;
   }
 
-  /* TÍTULO GRANDE NO CELULAR */
   .content h1 {
-    font-size: 28px;
+    font-size: 2.2rem;
   }
 
   .price {
-    font-size: 32px;
-  }
-
-  .btn-primary {
-    width: 85%;
-    margin-top: 8px;
-  }
-
-  .features {
-    padding: 25px 20px;
+    font-size: 2.5rem;
   }
 
 }
