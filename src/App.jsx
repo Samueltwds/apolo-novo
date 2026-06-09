@@ -46,20 +46,22 @@ function App() {
           onClick={() => setDarkMode(!darkMode)}
           className="toggle"
         >
-          {darkMode ? "☀️" : "🌙"}
+          {darkMode ? "" : ""}
         </button>
       </header>
 
       <section className="hero">
-        <h1 className="reveal">O FONE DOS DEUSES</h1>
+  <div className="content">
+    <h1 className="reveal">O FONE DOS DEUSES</h1>
 
-        <button
-          className="btn-primary"
-          onClick={() => addToCart(products[0])}
-        >
-          Comprar
-        </button>
-      </section>
+    <button
+      className="btn-primary"
+      onClick={() => addToCart(products[0])}
+    >
+      Comprar
+    </button>
+  </div>
+</section>
 
       <section className="features reveal">
         <h2>Por que escolher Apolo?</h2>
